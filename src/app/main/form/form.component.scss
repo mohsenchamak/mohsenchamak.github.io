@@ -1,0 +1,15 @@
+.saveButton {
+  display: flex;
+  justify-content: flex-end;
+  button {
+    background-color: green;
+    color: #ffff;
+    font-size: 12px;
+  }
+  button:disabled {
+    background-color: rgb(153, 161, 156);
+  }
+  i {
+    font-size: 14px;
+  }
+}

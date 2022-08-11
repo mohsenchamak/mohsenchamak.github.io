@@ -1,0 +1,59 @@
+.form-group {
+  margin: 29px 0;
+  display: flex;
+  position: relative;
+}
+
+.keep-left {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.keep-right {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.keep-bottom {
+  margin-top: 10%;
+  bottom: 0;
+}
+.left-line {
+  border-left: 0.5px dotted #cfcfb6;
+}
+
+.right-line {
+  border-right: 0.5px dotted #cfcfb6;
+}
+
+.top-line {
+  border-top: 0.5px dotted #cfcfb6;
+}
+
+.bottom-line {
+  border-bottom: 0.5px dotted #cfcfb6;
+}
+
+.div-space {
+  margin: 35px 0;
+}
+
+.sub-header {
+  display: inline-block;
+  padding: 25px 5px 15px 5px;
+  font-size: 16px;
+  font-weight: 800;
+  color: #997fff;
+}
+
+.required-icon {
+  color: red;
+  font-size: 10px;
+  position: absolute;
+  top: 14px;
+}
+
+.control {
+  margin-left: 2%;
+  position: relative;
+}

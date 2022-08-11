@@ -1,0 +1,58 @@
+.input-control {
+  width: 100%;
+  font-size: 12px;
+  text-align: right !important;
+  input {
+    text-align: center;
+  }
+}
+
+.date-error {
+  font-size: 9px;
+}
+
+.login-input {
+  color: #ffffff;
+
+  mat-label {
+    color: #ffffff;
+  }
+}
+.datepicker-content {
+  height: 46px;
+  input {
+    width: 100%;
+    height: 100%;
+  }
+  label {
+    position: absolute;
+    right: 10px;
+    top: -11px;
+    transition: all 0.02s;
+    padding: 0 2px;
+    z-index: 1;
+    color: #3020a1;
+    font-size: 12px;
+  }
+
+  label::before {
+    content: "";
+    height: 5px;
+    background: white;
+    position: absolute;
+    right: 0;
+    top: 7px;
+    width: 100%;
+    z-index: -1;
+  }
+  .datepicker-outer-container {
+    z-index: 1;
+    position: relative;
+  }
+}
+.options {
+  .mat-option-text {
+    text-align: center;
+    font-size: 12px;
+  }
+}

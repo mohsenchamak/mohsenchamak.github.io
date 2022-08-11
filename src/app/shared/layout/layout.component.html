@@ -1,0 +1,31 @@
+<header class="header">
+  <span class="logout" (click)="logOut()"><mat-icon>power_settings_new</mat-icon></span>
+  <span class="user-icon">
+    <mat-icon>person_pin</mat-icon>
+    <span class="user-name">{{username}}</span>
+  </span>
+  <span *ngIf="menuClosed" class="menu-button _tooltip" (click)="open()">
+    <i class="material-icons">menu</i>
+  </span>
+  <span class="_b"></span>
+  <span *ngIf="!menuClosed" class="menu-button _tooltip" (click)="closeNav()">
+   <i class="material-icons">format_indent_increase</i>
+  </span>
+</header>
+<div class="container-fluid main">
+  <div id="menu" class="sidebar">
+    <ul>
+      <li (click)="goToList()">
+        <i class="material-icons">grid_on</i>
+        {{"لیست"}}
+      </li>
+      <li (click)="goToForm()">
+        <i class="material-icons">view_quilt</i>
+        {{"فرم"}}
+      </li>
+    </ul>
+  </div>
+  <div class="content" id="content">
+    <ng-content></ng-content>
+  </div>
+</div>

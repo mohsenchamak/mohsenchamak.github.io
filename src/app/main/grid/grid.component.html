@@ -1,0 +1,12 @@
+<grid *ngIf="columns" [columns]="columns">
+    <tr *ngFor="let item of listData let index=index">
+      <td>{{item.radif}}</td>
+      <td>{{item.date}}</td>
+      <td>{{item.stateName}}</td>
+      <td>{{item.identityName}}</td>
+      <td>{{item.CUSR28005}}</td>
+      <td>{{item.CUSR28006}}</td>
+      <td>{{item.RUSR28007_title}}</td>
+      <td>{{item.RUSR28008_title}}</td>
+    </tr>
+</grid>

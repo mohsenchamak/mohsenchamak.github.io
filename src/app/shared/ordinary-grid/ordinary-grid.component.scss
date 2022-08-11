@@ -1,0 +1,33 @@
+table {
+  background-color: #ffffff;
+  width: 100%;
+  text-align: center;
+
+  td, th {
+    padding: 1px 3px;
+  }
+
+  tbody {
+    font-size: 12px;
+    tr {
+      td {
+        text-align: center;
+      }
+    }
+  }
+
+  thead {
+    border-bottom: 4px solid #DD9048;
+
+    th {
+      font-size: 15px;
+      font-weight: bold;
+      color: #5E5E5E;
+      text-align: center;
+    }
+
+    th:first-child {
+      border-left: none;
+    }
+  }
+}

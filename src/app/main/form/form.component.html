@@ -1,0 +1,83 @@
+<div class="container">
+  <form name="form" [formGroup]="form">
+    <div class="form-group">
+      <div class="row col-sm-12">
+        <div class="col-sm-4">
+          <ng-persian-datepicker>
+            <label for="date">{{'تاریخ'}}</label>
+            <input id="date" class="form-control" type="text" formControlName="Date" />
+          </ng-persian-datepicker>
+          <mat-error class="date-error" *ngIf="form.controls['Date'].invalid">{{'این فیلد اجباری است.'}}</mat-error>
+        </div>
+        <div class="col-sm-4">
+          <mat-form-field class="input-control" appearance="fill">
+            <mat-label>{{'نام'}}</mat-label>
+            <input matInput type="text" formControlName="CUSR28005" required>
+            <mat-error *ngIf="form.controls['CUSR28005'].invalid">{{'این فیلد اجباری است.'}}</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-sm-4">
+          <mat-form-field class="input-control" appearance="fill">
+            <mat-label>{{'نام خانوادگی خریدار'}}</mat-label>
+            <input matInput type="text" formControlName="CUSR28006" required>
+            <mat-error *ngIf="form.controls['CUSR28006'].invalid">{{'این فیلد اجباری است.'}}</mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="row col-sm-12">
+        <div class="col-sm-4">
+          <mat-form-field class="input-control" appearance="fill">
+            <mat-label>{{'موضوع'}}</mat-label>
+            <input matInput type="text" formControlName="subject" required="">
+            <mat-error *ngIf="form.controls['subject'].invalid">{{'این فیلد اجباری است.'}}</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-sm-4">
+          <mat-form-field class="input-control" appearance="fill">
+            <mat-label>{{'حساب'}}</mat-label>
+            <input type="text" placeholder="{{'یک مورد را انتخاب کنید'}}" aria-label="حساب" matInput
+              (change)="searchOnAccount(form.controls['RUSR28007'].value)" formControlName="RUSR28007"
+              [matAutocomplete]="account">
+            <mat-autocomplete #account="matAutocomplete" id="account">
+              <mat-option class="options" *ngFor="let option of accountList" [value]="option.value">
+                {{option.text}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </div>
+        <div class="col-sm-4">
+          <mat-form-field class="input-control" appearance="fill">
+            <mat-label>{{'تحویل گیرنده'}}</mat-label>
+            <input type="text" placeholder="{{'یک مورد را انتخاب کنید'}}" aria-label="تحویل گیرنده" matInput
+              formControlName="RUSR28008" [matAutocomplete]="transferee"
+              (change)="searchOnTransferee(form.controls['RUSR28008'].value)">
+            <mat-autocomplete #transferee="matAutocomplete" id="transferee">
+              <mat-option class="options" *ngFor="let o of transfereeList" [value]="o.value">
+                {{o.text}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="row col-sm-12">
+        <div class="col-sm-4">
+          <mat-form-field class="input-control" appearance="fill">
+            <mat-label>{{'توضیحات'}}</mat-label>
+            <textarea formControlName="description" matInput></textarea>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div class="row col-sm-12">
+      <div class="saveButton">
+        <button mat-raised-button (click)="save()" [disabled]="form.invalid">{{'ذخیره'}}
+          <i class="material-icons">save</i>
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
